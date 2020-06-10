@@ -1,0 +1,31 @@
+---
+title: "A smart title here"
+author: "Ashameed Person"
+geometry: margin=1in
+header-includes:
+  \usepackage{array}
+  \usepackage{tabularx}
+  \AtBeginDocument{\let\maketitle\relax} #to hide title
+output:
+  bookdown::pdf_book:
+    fig_caption: yes
+    keep_tex: no
+    number_sections: yes
+    toc: yes
+    toc_bib: yes
+    toc_depth: 2
+    citation_package: natbib
+    pandoc_args: ["--include-after-body=appendix.md"]
+fontsize: 12pt
+bibliography: WorkCited.bib
+biblio-style: humannat
+link-citations: true
+---
+
+```{r}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, eval = TRUE)
+```
+
+\section{new section}
+A lot of gibirish \citep{scottdamblon2010, hirth2010}.
+See appendix for more info. 
